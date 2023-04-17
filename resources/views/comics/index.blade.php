@@ -40,6 +40,11 @@
                                 <td>{{ $comic->series }}</td>
                                 <td>{{ $comic->sale_date }}</td>
                                 <td>{{ $comic->type }}</td>
+                                <td>
+                                    <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">
+                                        Edit
+                                    </a>
+                                </td>
                                 
                             </tr>
                         
