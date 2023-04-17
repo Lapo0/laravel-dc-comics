@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <h1>
-                Crea una nuova pasta
+                Crea un nuovo Comic
             </h1>
 
             <form action="{{ route('comics.store') }}" method="POST">
@@ -34,7 +34,7 @@
 
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Giorno di uscita</label>
-                    <input type="text" class="form-control" id="sale_date" name="sale_date" placeholder="2018-10-02">
+                    <input type="date" class="form-control" id="sale_date" name="sale_date">
                 </div>
 
                 <div class="mb-3">
