@@ -8,7 +8,7 @@
                 Crea una nuova pasta
             </h1>
 
-            <form action="{{ route('comics.store') }}">
+            <form action="{{ route('comics.store') }}" method="POST">
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
                     <input type="text" class="form-control" id="title" name="title">
