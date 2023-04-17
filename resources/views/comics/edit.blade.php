@@ -11,7 +11,7 @@
             <form action="{{ route('comics.update', $comic) }}" method="POST">
 
                 @csrf
-                
+                @method('PUT')
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
@@ -45,7 +45,9 @@
 
                 <div class="mb-3">
                     <label for="description" class="form-label">Descrizione</label>
-                    <textarea class="form-control" name="description" id="description" cols="30" rows="10" value="{{ $comic->description }}"></textarea>
+                    <textarea class="form-control" name="description" id="description" cols="30" rows="10">
+                    {{ $comic->description }}
+                    </textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">
