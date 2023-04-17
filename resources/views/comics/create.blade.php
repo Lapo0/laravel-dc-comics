@@ -9,6 +9,9 @@
             </h1>
 
             <form action="{{ route('comics.store') }}" method="POST">
+
+                @csrf
+
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
                     <input type="text" class="form-control" id="title" name="title">
@@ -16,22 +19,27 @@
 
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Immagine (url)</label>
-                    <input type="email" class="form-control" id="thumb" name="thumb">
+                    <input type="text" class="form-control" id="thumb" name="thumb">
                 </div>
 
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo</label>
-                    <input type="email" class="form-control" id="price" name="price">
+                    <input type="text" class="form-control" id="price" name="price">
                 </div>
 
                 <div class="mb-3">
-                    <label for="sale_date" class="form-label">Serie</label>
-                    <input type="email" class="form-control" id="sale_date" name="sale_date">
+                    <label for="series" class="form-label">Serie</label>
+                    <input type="text" class="form-control" id="series" name="series">
+                </div>
+
+                <div class="mb-3">
+                    <label for="sale_date" class="form-label">Giorno di uscita</label>
+                    <input type="text" class="form-control" id="sale_date" name="sale_date">
                 </div>
 
                 <div class="mb-3">
                     <label for="type" class="form-label">Tipologia</label>
-                    <input type="email" class="form-control" id="type" name="type">
+                    <input type="text" class="form-control" id="type" name="type">
                 </div>
 
                 <div class="mb-3">
