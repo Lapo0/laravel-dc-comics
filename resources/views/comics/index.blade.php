@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container py-3">
         <div class="row">
-            <a class="btn btn-primary" href="{{ route('comics.create') }}">
+            <a class="btn btn-primary w-25 m-auto" href="{{ route('comics.create') }}">
                 Nuovo Comic
             </a>
         </div>

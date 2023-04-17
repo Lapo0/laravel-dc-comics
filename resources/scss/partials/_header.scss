@@ -1,0 +1,49 @@
+.container {
+    .row {
+    justify-content: space-between;
+    align-items: stretch;
+
+        .logo {
+            padding: 20px 0;
+        }
+
+        .link {
+            display: flex;
+            height: 100%;
+
+            li {
+                line-height: 40px;
+                margin: 0 15px;
+                font-weight: bold;
+                font-size: 13px;
+                position: relative;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                background-color: blue;
+                opacity: 0;
+                }
+                
+                &:hover, &.active {
+                    color: blue;
+                }
+                &:hover::before, &.active::before {
+                opacity: 1;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: currentColor;
+                }
+            }
+        }
+    }
+}

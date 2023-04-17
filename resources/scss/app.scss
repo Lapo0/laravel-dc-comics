@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+@import './partials/header';
+
+@import './partials/footer';
+
 img {
     max-width: 100%;
 }
@@ -7,4 +11,8 @@ img {
 .card {
     width: 50%;
     margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
 }
