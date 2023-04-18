@@ -9,16 +9,13 @@
             </div>
             <div class="col">
                 <ul class="link">
-                    <a href="{{ route('comics.create') }}">
-                        <li>
-                            NEW COMIC
-                        </li>
-                    </a>
-                    <a href="{{ route('comics.index') }}">
-                        <li>
-                            COMICS
-                        </li>
-                    </a>
+                    @foreach($links as $link)
+                        <a href="{{ route('comics.index') }}">
+                            <li>
+                                {{ $link }}
+                            </li>
+                        </a>
+                    @endforeach
                 </ul>
             </div>
         </div>
