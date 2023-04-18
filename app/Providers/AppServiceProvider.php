@@ -24,16 +24,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         view()->share('links', [
-            'CHARACTERS',
-            'COMICS',
-            'MOVIES',
-            'TV',
-            'GAMES',
-            'COLLECTIBLES',
-            'VIDEOS',
-            'FANS',
-            'NEWS',
-            'SHOP'
+            [
+                'title' => 'CREA COMIC',
+                'route' => 'comics.create',
+            ],
+            [
+                'title' => 'COMICS',
+                'route' => 'comics.index',
+            ],
         ]);
 
         view()->share('buy_links', [

@@ -10,9 +10,9 @@
             <div class="col">
                 <ul class="link">
                     @foreach($links as $link)
-                        <a href="{{ route('comics.index') }}">
+                        <a href="{{ route($link['route']) }}">
                             <li>
-                                {{ $link }}
+                            {{ $link['title'] }}
                             </li>
                         </a>
                     @endforeach
