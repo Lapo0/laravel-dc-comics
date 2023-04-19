@@ -41,19 +41,9 @@ class ComicController extends Controller
             ]
         );
 
-        $new_comic = new Comic();
+        $new_comic = Comic::create($data);
 
-        $new_comic->title = $data['title'];
-        $new_comic->thumb = $data['thumb'];
-        $new_comic->price = $data['price'];
-        $new_comic->series = $data['series'];
-        $new_comic->sale_date = $data['sale_date'];
-        $new_comic->type = $data['type'];
-        $new_comic->description = $data['description'];
-
-        $new_comic->save();
-
-        return redirect()->route('comics.show', $new_comic);
+        return to_route('comics.show', $new_comic);
     }
 
     public function edit(Comic $comic) {
@@ -76,15 +66,13 @@ class ComicController extends Controller
             ]
         );
 
-        $comic->title = $data['title'];
-        $comic->thumb = $data['thumb'];
-        $comic->price = $data['price'];
-        $comic->series = $data['series'];
-        $comic->sale_date = $data['sale_date'];
-        $comic->type = $data['type'];
-        $comic->description = $data['description'];
+        // do la proprietà fillable e poi salvo i dati
+        $comic->fill($data);
 
         $comic->save();
+
+        // oppure posso fare entrambe le cose con la funzione update
+        // $comic->update($data);
 
         return to_route('comics.show', $comic);
     }
