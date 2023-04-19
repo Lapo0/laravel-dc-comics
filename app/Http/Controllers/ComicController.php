@@ -55,7 +55,7 @@ class ComicController extends Controller
 
         $data = $request->validate(
             [
-                'title' => 'required|max:255|min:1',
+                'title' => 'required|max:255|min:5',
                 'description' => 'required|string' ,
                 'thumb' => 'required|max:255|url' ,
                 'price' => 'required|numeric' ,
